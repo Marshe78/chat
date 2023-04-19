@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const server = require('https').createServer(app)
+const server = require('http').createServer(app)
 const io = require('socket.io')(server)
 const socketManage = require('./socketManage')(io)
-const PORT = process.env.PORT || 443
+const PORT = process.env.PORT || 4000
 const path = require('path')
 
 
