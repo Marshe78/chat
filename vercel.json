@@ -1,4 +1,8 @@
 {
+    "routes": [
+        { "src": "/", "dest": "/src/index.js" }
+      ],
+      "homepage": "/",
     "cleanUrls": true,
     "version": 2,
     "builds": [
@@ -9,10 +13,6 @@
       {
         "src": "build/**",
         "use": "@vercel/static"
-      },
-      {
-        "source": "/",
-        "destination": "/server/index/js"
       }
     ]
     
