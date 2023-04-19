@@ -3,7 +3,7 @@ const app = express()
 const server = require('https').createServer(app)
 const io = require('socket.io')(server)
 const socketManage = require('./socketManage')(io)
-const PORT = process.env.PORT || 80
+const PORT = process.env.PORT || 443
 const path = require('path')
 
 
