@@ -9,7 +9,7 @@ const addUsers = ( users, user ) => {
     return users
 }
 
-const createChat = ({ name='Community', description='Public room' } = {}) => ({
+const createChat = ({ name='Faim du monde', description='Public chat' } = {}) => ({
     name,
     description,
     messages: [],

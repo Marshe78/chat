@@ -41,13 +41,13 @@ export class LoginPage extends Component {
         <Grid.Column computer={ 6 } tablet={ 8 } mobile={ 14 } >
           <Header as='h2' icon textAlign='center' color='blue'>
             <Icon name='discussions' />
-            Simple Chats.
+            Chat
           </Header>
           <Form size='small' onSubmit={this.handleSubmit}>
             <Form.Input 
               name='nickname'
               type='text'
-              placeholder='Your nickname !'
+              placeholder='Choisis un pseudo !'
               onChange={this.handleChange}
               autoFocus
               icon={<Icon name='add user' link circular inverted onClick={ this.handleSubmit } />}

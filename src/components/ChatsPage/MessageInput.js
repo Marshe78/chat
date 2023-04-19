@@ -26,7 +26,7 @@ export class MessageInput extends Component {
             fluid
             name='msg'
             value={msg}
-            placeholder='Write your message'
+            placeholder='Ton message'
             onChange={this.handleChange}
             onFocus = {this.handleOnFocused}
             onBlur = {this.handleOnBlur}

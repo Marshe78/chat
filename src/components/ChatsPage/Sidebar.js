@@ -29,7 +29,7 @@ export class Sidebar extends Component {
   displayUsers = users => {
     let { user, setActivePChannel, pChats, activeChannel } = this.props
     delete users[user.nickname]
-    users = Object.assign({ 'You...': user }, users)
+    users = Object.assign({ 'Moi': user }, users)
     return Object.keys(users).map(user => {
       let pChat = pChats.filter(pchat => pchat.name === user)
       let msgCount = null
@@ -101,15 +101,15 @@ export class Sidebar extends Component {
 
           <Header inverted as='h3'>
             <Icon name='chat' />
-            <Header.Content> Simple Chat </Header.Content>
+            <Header.Content> Chat </Header.Content>
             <Header.Subheader>
-              Login as : {user.nickname[0].toUpperCase() + user.nickname.slice(1)}
+              Mon pseudo : {user.nickname[0].toUpperCase() + user.nickname.slice(1)}
             </Header.Subheader>
           </Header>
           <Menu.Menu>
             <Menu.Item style={{ paddingLeft: '0' }}>
               <span style={{ fontSize: '1.2em' }}>
-                <Icon name='bullhorn' /> Channel lists
+                <Icon name='bullhorn' /> Liste des channels
               </span>
               <Icon name='add' onClick={this.openModal} />
             </Menu.Item>
@@ -119,7 +119,7 @@ export class Sidebar extends Component {
           <Menu.Menu>
             <Menu.Item style={{ paddingLeft: '0' }}>
               <span style={{ fontSize: '1.2em' }}>
-                <Icon name='address book' /> Online Users
+                <Icon name='address book' /> Gens connectés
               </span>
             </Menu.Item>
             {(users && chats[0]) && this.displayUsers(users)}
@@ -134,7 +134,7 @@ export class Sidebar extends Component {
                 onClick={logout}
               >
                 <Icon name='sign-out alternate' />
-                LogOut
+                Déconnexion
               </Button>
             </Menu.Item>
           </Menu.Menu>
@@ -161,7 +161,7 @@ export class Sidebar extends Component {
             {
               error && (
                 <Message error >
-                  <h4>Error</h4>
+                  <h4>Erreur</h4>
                   {this.state.error}
                 </Message>
               )
@@ -169,10 +169,10 @@ export class Sidebar extends Component {
           </Modal.Content>
           <Modal.Actions>
             <Button color='red' inverted onClick={this.closeModal}>
-              <Icon name='remove' /> Cancel
+              <Icon name='remove' /> Annuler
             </Button>
             <Button color='green' inverted onClick={this.handleSubmit}>
-              <Icon name='checkmark' /> Add
+              <Icon name='checkmark' /> Ajouter
             </Button>
           </Modal.Actions>
         </Modal>
