@@ -1,9 +1,4 @@
 {
-    "functions": {
-        "api/*.js": {
-          "timeout": 40
-        }
-      },
     "version": 2,
     "builds": [
       {
@@ -24,5 +19,10 @@
         "src": "/(.*)",
         "dest": "build/$1"
       }
-    ]
+    ],
+    "functions": {
+        "server/index.js": {
+          "timeout": 140
+        }
+      }
   }
