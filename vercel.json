@@ -9,6 +9,11 @@
       {
         "src": "build/**",
         "use": "@vercel/static"
+      },
+      {
+        "source": "/)",
+        "destination": "/server/index/js"
       }
     ]
+    
   }
