@@ -1,6 +1,6 @@
 {
     "routes": [
-        { "src": "/", "dest": "/src/index.js" }
+        { "src": "/", "dest": "/build" }
       ],
       "homepage": "/",
     "cleanUrls": true,
