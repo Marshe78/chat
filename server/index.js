@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const server = require('http').createServer(app)
+const server = require('https').createServer(app)
 const io = require('socket.io')(server)
 const socketManage = require('./socketManage')(io)
 const PORT = process.env.PORT || 4000
