@@ -10,7 +10,7 @@
         "use": "@vercel/static",
         "config": {
             "maxLambdaSize": "50mb",
-            "timeout": 50 
+            "timeout": 50000 
         }
       }
     ],
