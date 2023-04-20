@@ -2,12 +2,12 @@
     "version": 2,
     "builds": [
       {
-        "src": "server/index.js",
-        "use": "@vercel/node"
-      },
-      {
         "src": "build/**",
-        "use": "@vercel/static"
+        "use": "@vercel/static",
+        "config": {
+            "maxLambdaSize": "50mb",
+            "timeout": 50 
+        }
       }
     ],
     "routes": [
